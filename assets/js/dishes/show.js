@@ -1,26 +1,4 @@
-const dishes = [
-  {
-    name: "Pizza",
-    category: "Fast Meals",
-    image: "assets/img/pizza.jpg",
-    price: "5",
-    ingredients: "Tomato,Carots,Fluer",
-  },
-  {
-    name: "Pasta",
-    category: "Fast Meals",
-    image: "assets/img/pasta.jpg",
-    price: "15",
-    ingredients: "Tomato,Carots,Fluer",
-  },
-  {
-    name: "Burger",
-    category: "Fast Meals",
-    image: "assets/img/burger.jpg",
-    price: "5",
-    ingredients: "Tomato,Carots,Fluer",
-  },
-];
+const dishes = [];
 
 // console.log("I am not in add new dish function");
 function addNewDish() {
