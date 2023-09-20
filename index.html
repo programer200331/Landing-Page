@@ -1,0 +1,157 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+</head>
+
+<body>
+  <div id="wrapper-main">
+    <div class="header">
+      <h2 style="color: gainsboro">Restaurant Menu</h2>
+      <form action="#" method="get">
+        <div class="input-group mb-3">
+          <a
+            id="open-modal-button"
+            class="modal-effect btn btn-secondary btn-block"
+            data-effect="effect-scale"
+            data-toggle="modal"
+            href="#addDishModal"
+            >New Dish</a
+          >
+          <input
+            id="search-input"
+            type="search"
+            class="form-control"
+            placeholder="Search for a dish..."
+          />
+          <div class="input-group-append">
+            <a id="search-button" class="btn btn-success" type="submit"> GO </a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <br />
+    <div id="wrapper-grid"></div>
+  </div>
+
+  <!-- Insert modal -->
+  <div class="modal" id="addDishModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modal-content-demo">
+        <div class="modal-header">
+          <h6 class="modal-title">إضافة طبق</h6>
+          <button
+            aria-label="Close"
+            class="close"
+            data-dismiss="modal"
+            type="button"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="form-data" action="#" method="POST">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="name" class="col-form-label">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                required
+              />
+              <label for="category" class="col-form-label">Category:</label>
+              <input
+                type="text"
+                id="category"
+                name="category"
+                class="form-control"
+                required
+              />
+              <label for="image" class="col-form-label">Image Link:</label>
+              <input
+                type="url"
+                id="image"
+                name="image"
+                class="form-control"
+                required
+              />
+              <label for="price" class="col-form-label">Price:</label>
+              <input
+                type="number"
+                min="1.00"
+                max="99.9"
+                step="0.01"
+                pattern="^[0-9]{1,2}([,][0-9]{1,2})?$"
+                id="price"
+                name="price"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="ingredients" class="col-form-label"
+                >Ingredients:</label
+              >
+              <input
+                type="text"
+                minlength="3"
+                id="ingredients"
+                name="ingredients"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="submit"
+                class="btn ripple btn-success"
+                onclick="addNewDish()"
+              >
+                حفظ
+              </button>
+              <button
+                class="btn ripple btn-secondary"
+                data-dismiss="modal"
+                type="button"
+              >
+                إغلاق
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- End Insert modal -->
+  <script src="assets/js/dishes/show.js"></script>
+  <script src="assets/js/dishes/search.js"></script>
+  <!-- JQuery min js -->
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- Bootstrap Bundle js -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JavaScript (includes jQuery) -->
+</body>
