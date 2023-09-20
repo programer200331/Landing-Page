@@ -1,4 +1,26 @@
-const dishes = [];
+const dishes = [
+  {
+    name: "Pizza",
+    category: "Fast Meals",
+    image: "assets/img/pizza.jpg",
+    price: "5",
+    ingredients: "Tomato,Carots,Fluer",
+  },
+  {
+    name: "Pasta",
+    category: "Fast Meals",
+    image: "assets/img/pasta.jpg",
+    price: "15",
+    ingredients: "Tomato,Carots,Fluer",
+  },
+  {
+    name: "Burger",
+    category: "Fast Meals",
+    image: "assets/img/burger.jpg",
+    price: "5",
+    ingredients: "Tomato,Carots,Fluer",
+  },
+];
 
 // console.log("I am not in add new dish function");
 function addNewDish() {
@@ -8,7 +30,7 @@ function addNewDish() {
   // Add an event listener to the form's submit event
   // formData.addEventListener("submit", function (event) {
   //   // Prevent the default form submission
-  //   event.preventDefault();
+  // event.preventDefault();
 
   // Get form input values
   const name = document.getElementById("name").value;
@@ -49,7 +71,7 @@ function addNewDish() {
     $("#addDishModal").modal("hide");
     // formData.submit();
   } else {
-    alert("Enter requeired data :)");
+    // alert("Enter requeired data :)");
   }
   // });
   // Update the displayed menu
@@ -69,12 +91,12 @@ function displayAllMenuItems() {
     const menuItem = document.createElement("div");
     menuItem.classList.add("menu-item");
     menuItem.innerHTML = `
-        <img class="menu-item-image" src="${dish.image}" alt="${dish.name}" />
+        <img class="menu-item-image" src="${dish.image}" alt="${dish.image}.jpg" />
         <div class="menu-item-text">
             <h3 class="menu-item-heading">
                 <span class="menu-item-name">${dish.name}</span>
                 <span class="menu-item-category">${dish.category}</span>
-                <span class="menu-item-price">${dish.price}</span>
+                <span class="menu-item-price">${dish.price}$</span>
             </h3>
             <p class="menu-item-ingredients">${dish.ingredients}</p>
         </div>
