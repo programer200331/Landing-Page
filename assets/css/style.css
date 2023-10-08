@@ -1,0 +1,259 @@
+/* Start Variables */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+/* End Variables */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ecccc1;
+  transition: 0.5s;
+}
+.content .imgbox img {
+  width: 500px; /* تعيين العرض بالبكسلات */
+  height: 500px; /* تعيين الارتفاع بالبكسلات */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; /* تعيين اليمين بدلاً من اليسار */
+  width: 100;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  position: relative;
+  min-width: 80px;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  display: inline-block;
+  color: black;
+  font-weight: 400;
+  margin-left: 40px;
+  text-decoration: none;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .textbox {
+  position: relative;
+  max-width: 600px;
+}
+
+.content .textbox p {
+  color: rgb(71, 71, 71);
+  font-size: 3.3em;
+  /* font-family: "Cairo", sans-serif; */
+  font-family: "Cinzel", serif;
+  line-height: 1.1em;
+  text-transform: uppercase;
+}
+
+.content .textbox a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px 20px;
+  background: white;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Start Services  */
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 40px;
+}
+.services .services-content .srv {
+  display: flex;
+  margin-bottom: 80px;
+}
+.services .services-content .srv i {
+  color: var(--main-color);
+  flex-basis: 60px;
+}
+.services .services-content .srv .text {
+  flex: 1;
+}
+.services .services-content .srv .text h3 {
+  margin: 0 0 20px;
+  font-weight: 100;
+}
+
+.services .services-content .srv .text h3:hover {
+  margin: 0 0 20px;
+  font-weight: 100;
+  color: #f2bcbc;
+}
+
+.srv h3 .arrow {
+  display: none;
+  margin-left: 10px; /* Adjust the margin as needed */
+  transition: transform 0.2s ease; /* Add a smooth transition */
+}
+
+/* Show the arrow when hovering over .srv */
+.srv h3:hover .arrow {
+  display: inline-block;
+  transform: translateX(5px); /* Adjust the translation as needed */
+}
+
+.services .services-content .srv .text p {
+  color: #444;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.services .services-content .image {
+  text-align: center;
+  position: relative;
+}
+.services .services-content .image::before {
+  content: "";
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: calc(100% + 100px);
+  top: -50px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+.services .services-content .image img {
+  width: 260px;
+}
+
+/* End Services  */
+
+/* Start Portfolio */
+.portfolio {
+  padding-top: 100px;
+  padding-bottom: var(--section-padding);
+  background-color: white;
+  padding-right: 100px;
+  padding-left: 200px;
+}
+
+.portfolio h2 {
+  color: #434343;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-weight: 100;
+  font-size: 2.5em;
+}
+
+.portfolio .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+}
+
+.portfolio .portfolio-content .card {
+  background-color: white;
+}
+.portfolio .portfolio-content .card img {
+  max-width: 80%;
+}
+.portfolio .portfolio-content .card .info {
+  padding: 20px;
+}
+.portfolio .portfolio-content .card .info h3 {
+  margin: 0;
+}
+.portfolio .portfolio-content .card .info p {
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+/* End Portfolio */
+
+/* Start About */
+
+.about {
+  background-color: white;
+}
+
+.card-items {
+  flex: auto;
+  background-color: white;
+  flex-direction: column;
+}
+
+.card:not(:first-child) {
+  width: 100%;
+  border-top: 2px solid #000; /* إضافة خط فاصل بين البطاقات */
+  margin-bottom: 100px;
+}
+
+/* End About */
+
+/* Start Footer */
+.footer {
+  background-color: rgb(232, 232, 232);
+  color: rgb(160, 160, 160);
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 100;
+  font-size: 16px;
+}
+.footer span {
+  font-weight: 500;
+  color: rgb(94, 94, 94);
+}
+/* End Footer */
